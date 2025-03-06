@@ -12,6 +12,14 @@ body {
     background-color: #e3f2fd; /* Bluish background color */
     color: #333;
     padding-top: 60px; /* Space for fixed navbar */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+
+/* Wrapper for content */
+main {
+    flex: 1; /* This makes sure the content takes up the remaining space */
 }
 
 /* Navigation Bar */
@@ -116,6 +124,9 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
