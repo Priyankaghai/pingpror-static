@@ -1,13 +1,18 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General styles for the body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #A9B7B0; /* Bluish-grey background */
-    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
     display: flex;
-    flex-direction: column; /* Enable footer to stick to the bottom */
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #f0f4f8; /* Bluish-grey background */
 }
 
 /* Header Section */
@@ -17,6 +22,7 @@ header {
     padding: 10px 0;
 }
 
+/* Contact Info Section */
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -40,6 +46,7 @@ header {
     margin-right: 10px;
 }
 
+/* Navigation Bar */
 .navbar {
     list-style: none;
     text-align: center;
@@ -64,52 +71,47 @@ header {
 
 /* Main Content Section */
 main {
-    flex-grow: 1; /* Ensures the main content takes up available space */
+    flex: 1; /* This ensures that main content takes up all available space */
     padding: 20px;
-    text-align: center; /* Center align the content */
 }
 
-.content, .contact {
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.content h2, .contact h1 {
+.content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.content p, .contact p {
+.content p {
     font-size: 1.1rem;
     margin-bottom: 15px;
     line-height: 1.8;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 500px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
+.cta-button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
+    font-size: 1.1rem;
 }
 
-button:hover {
+.cta-button:hover {
     background-color: #555;
 }
 
@@ -119,29 +121,9 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: auto; /* This ensures footer stays at the bottom */
 }
 
 footer a {
     color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Back to Top Button */
-.back-to-top {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #555;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.back-to-top:hover {
-    background-color: #333;
-}
+    text
