@@ -4,6 +4,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #A9B7B0; /* Bluish-grey background */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    display: flex;
+    flex-direction: column; /* Enable footer to stick to the bottom */
 }
 
 /* Header Section */
@@ -60,24 +64,53 @@ header {
 
 /* Main Content Section */
 main {
+    flex-grow: 1; /* Ensures the main content takes up available space */
     padding: 20px;
+    text-align: center; /* Center align the content */
 }
 
-.content {
+.content, .contact {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.content h2 {
+.content h2, .contact h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.content p {
+.content p, .contact p {
     font-size: 1.1rem;
     margin-bottom: 15px;
     line-height: 1.8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
 }
 
 /* Footer Section */
@@ -86,6 +119,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
 }
 
 footer a {
