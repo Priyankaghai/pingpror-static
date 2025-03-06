@@ -12,12 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #44a6b3; /* Subtle blue background */
+    background-color: #e0f7fa; /* Subtle blue background */
 }
 
 /* Header Section */
 header {
-    background-color: #607d8b;
+    background-color: #607d8b; /* Blueish grey color */
     color: white;
     padding: 10px 0;
 }
@@ -141,7 +141,7 @@ button:hover {
 
 /* Footer Section */
 footer {
-    background-color: #333;
+    background-color: #607d8b; /* Blueish grey color */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -169,5 +169,5 @@ footer a:hover {
 }
 
 .back-to-top:hover {
-    background-color: #607d8b;
+    background-color: #333;
 }
