@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #e0f7fa; /* Subtle blue background */
+    background-color: #44a6b3; /* Subtle blue background */
 }
 
 /* Header Section */
