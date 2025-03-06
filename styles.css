@@ -17,7 +17,7 @@ body {
 
 /* Header Section */
 header {
-    background-color: #333;
+    background-color: #607d8b;
     color: white;
     padding: 10px 0;
 }
@@ -169,5 +169,5 @@ footer a:hover {
 }
 
 .back-to-top:hover {
-    background-color: #333;
+    background-color: #607d8b;
 }
