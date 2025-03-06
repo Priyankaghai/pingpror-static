@@ -12,14 +12,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #c8f2f8; /* Subtle blue background */
+    background-color: #A2B9CC; /* Bluish background for the site */
 }
 
 /* Header Section */
 header {
-    background-color: #d8edf7; /* Greyish color */
-    color: white;
-    padding: 10px 0;
+    background-color: #CFD8DC; /* Light grey background for header */
+    color: black;
+    padding: 15px 0;
 }
 
 /* Contact Info Section */
@@ -60,7 +60,7 @@ header {
 }
 
 .navbar a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
 }
@@ -71,47 +71,65 @@ header {
 
 /* Main Content Section */
 main {
-    flex: 1; /* This ensures that main content takes up all available space */
+    flex: 1; /* Ensures the content section fills the remaining space */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Horizontally center the content */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
     padding: 20px;
+    text-align: center; /* Ensures text is centered */
 }
 
-/* Contact Form */
-.contact {
-    max-width: 800px;  /* Increased max-width for better readability */
-    width: 100%; /* Ensure full width within max-width */
+/* Hero and Content Section */
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.contact h1 {
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.contact p {
+.content p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
-/* Form Fields */
-form {
+/* Form Section (Contact Us page) */
+.contact form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     align-items: center;
-    gap: 15px; /* Space between form elements */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-label {
-    font-size: 1.1rem;
-    text-align: left;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-input, textarea {
+.contact form input,
+.contact form textarea {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -120,11 +138,9 @@ input, textarea {
 }
 
 textarea {
-    resize: vertical;
     min-height: 100px;
 }
 
-/* Submit Button */
 button {
     background-color: #333;
     color: white;
@@ -133,6 +149,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
@@ -141,15 +158,15 @@ button:hover {
 
 /* Footer Section */
 footer {
-    background-color: #b0bec5; /* Greyish color */
-    color: white;
+    background-color: #CFD8DC; /* Light grey background for footer */
+    color: black;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto; /* This ensures footer stays at the bottom */
+    padding: 15px 0;
+    margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
 footer a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -169,5 +186,5 @@ footer a:hover {
 }
 
 .back-to-top:hover {
-    background-color: #d8edf7;
+    background-color: #333;
 }
