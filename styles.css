@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #f0f4f8; /* Bluish-grey background */
+    background-color: #e0f7fa; /* Subtle blue background */
 }
 
 /* Header Section */
@@ -79,42 +79,63 @@ main {
     padding: 20px;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.hero img {
-    max-width: 100%;
-    height: auto;
-}
-
-.content {
-    max-width: 800px;
+/* Contact Form */
+.contact {
+    max-width: 600px;
+    width: 100%; /* Ensure full width within max-width */
     text-align: center;
 }
 
-.content h2 {
+.contact h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.content p {
+.contact p {
     font-size: 1.1rem;
-    margin-bottom: 15px;
-    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-.cta-button {
+/* Form Fields */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between form elements */
+}
+
+label {
+    font-size: 1.1rem;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
     font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.cta-button:hover {
+button:hover {
     background-color: #555;
 }
 
