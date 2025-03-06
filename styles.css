@@ -5,13 +5,12 @@
     box-sizing: border-box;
 }
 
-/* Body and text styling */
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #e3f2fd; /* Bluish background color */
     color: #333;
-    padding-top: 60px; /* Space for fixed navbar */
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
@@ -19,7 +18,7 @@ body {
 
 /* Wrapper for content */
 main {
-    flex: 1; /* This makes sure the content takes up the remaining space */
+    flex: 1; /* This ensures content takes up the remaining space */
 }
 
 /* Navigation Bar */
