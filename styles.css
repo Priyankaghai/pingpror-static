@@ -1,123 +1,113 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
+/* General styles for the body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #e3f2fd; /* Bluish background color */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0;
+    padding: 0;
 }
 
-/* Wrapper for content */
-main {
-    flex: 1; /* This ensures content takes up the remaining space */
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    text-align: center; /* Centers text inside */
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
 
-/* Navigation Bar */
-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #1e88e5; /* Bluish color for navbar */
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000;
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 .navbar {
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li {
-    margin-left: 20px;
+    display: inline;
+    margin: 0 15px;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 8px;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
 }
 
 .navbar a:hover {
-    background-color: #1565c0; /* Darker blue on hover */
-    border-radius: 5px;
+    text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-    background-color: #1e88e5; /* Bluish background for the hero section */
-    color: white;
+/* Main Content Section */
+main {
+    padding: 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    padding: 100px 20px; /* Space for navbar and padding */
 }
 
-.hero h1 {
-    font-size: 3em;
+.content h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* About Us Content Section (Centering content here) */
-.content {
-    background-color: white;
-    padding: 40px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-    margin-top: 20px;
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
 /* Footer Section */
 footer {
-    background-color: #1e88e5; /* Blue footer */
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 10px 0;
 }
 
-footer p {
-    margin-bottom: 10px;
-}
-
-.back-to-top {
-    text-decoration: none;
+footer a {
     color: white;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .back-to-top:hover {
-    color: #cfd8dc;
+    background-color: #333;
 }
