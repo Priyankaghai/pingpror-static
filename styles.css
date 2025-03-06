@@ -72,6 +72,10 @@ header {
 /* Main Content Section */
 main {
     flex: 1; /* This ensures that main content takes up all available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
     padding: 20px;
 }
 
@@ -87,7 +91,6 @@ main {
 
 .content {
     max-width: 800px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -126,4 +129,24 @@ footer {
 
 footer a {
     color: white;
-    text
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+}
