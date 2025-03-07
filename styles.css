@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #e39a12; /* Light grey background for the site */
+    background-color: #e1bb75; /* background color for the site */
 }
 
 /* Header Section */
