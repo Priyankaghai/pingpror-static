@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #CFD8DC; /* Light grey background for the site */
+    background-color: #e39a12; /* Light grey background for the site */
 }
 
 /* Header Section */
@@ -158,7 +158,7 @@ button:hover {
 
 /* Footer Section */
 footer {
-    background-color: #cce0f1; /* Light grey background for footer */
+    background-color: #cce0f1; /* bluishbackground for footer */
     color: black;
     text-align: center;
     padding: 15px 0;
