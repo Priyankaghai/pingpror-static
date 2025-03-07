@@ -17,7 +17,7 @@ body {
 
 /* Header Section */
 header {
-    background-color: #cce0f1; /* Bluishbackground for header */
+    background-color: #cce0f1; /* Bluish background for header */
     color: black;
     padding: 10px 0;
 }
@@ -115,6 +115,49 @@ main {
 .content p {
     font-size: 1rem;
     margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.service-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
