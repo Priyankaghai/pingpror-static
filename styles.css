@@ -12,14 +12,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #ded571; /* Subtle bluish background for the site */
+    background-color: #d3d3d3; /* Subtle greyish background for the site */
 }
 
 /* Header Section */
 header {
-    background-color: #cce0f1; /* Bluish background for header */
+    background-color: #cce0f1; /* Bluishbackground for header */
     color: black;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 /* Contact Info Section */
@@ -32,7 +32,7 @@ header {
 
 .contact-info {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .phone, .email {
@@ -41,9 +41,9 @@ header {
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 
 /* Navigation Bar */
@@ -56,13 +56,13 @@ header {
 
 .navbar li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 12px;
 }
 
 .navbar a {
     color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .navbar a:hover {
@@ -76,25 +76,25 @@ main {
     flex-direction: column;
     justify-content: center; /* Center the content vertically */
     align-items: center; /* Center the content horizontally */
-    padding: 20px;
+    padding: 15px;
     text-align: center; /* Ensures text is centered */
 }
 
 /* Hero and Content Section */
 .hero {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 .hero img {
@@ -103,26 +103,26 @@ main {
 }
 
 .content {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .content p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 /* Form Section (Contact Us page) */
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Further reduced gap between form elements */
+    gap: 3px; /* Further reduced gap between form elements */
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -132,27 +132,28 @@ main {
 .contact form input,
 .contact form textarea {
     width: 100%;
-    padding: 8px;  /* Reduced padding for less space */
-    font-size: 1rem;
+    padding: 6px;  /* Reduced padding for even less space */
+    font-size: 0.9rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 5px; /* Reduced margin for further compactness */
+    margin-bottom: 3px; /* Reduced margin for more compactness */
 }
 
 textarea {
-    min-height: 80px;  /* Reduced height for the textarea */
+    min-height: 70px;  /* Reduced height for the textarea */
 }
 
 /* Button */
 button {
     background-color: #333;
     color: white;
-    padding: 8px 16px; /* Reduced padding */
-    font-size: 1.1rem;
+    padding: 6px 14px; /* Reduced padding */
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -164,7 +165,7 @@ footer {
     background-color: #cce0f1; /* Bluish background for footer */
     color: black;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
