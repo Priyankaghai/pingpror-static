@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #f0f4c1; /* Subtle bluish background for the site */
+    background-color: #ded571; /* Subtle bluish background for the site */
 }
 
 /* Header Section */
@@ -122,7 +122,7 @@ main {
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Reduced gap between form elements */
+    gap: 5px; /* Further reduced gap between form elements */
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -136,7 +136,7 @@ main {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px; /* Add small margin for separation between fields */
+    margin-bottom: 5px; /* Reduced margin for further compactness */
 }
 
 textarea {
@@ -147,7 +147,7 @@ textarea {
 button {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Reduced padding */
     font-size: 1.1rem;
     border: none;
     border-radius: 5px;
