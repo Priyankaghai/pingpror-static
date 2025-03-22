@@ -6,61 +6,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - PingPro DigiComm</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation Bar and Header Section -->
     <header>
-        <!-- Contact Info Section (Phone and Email) -->
         <div class="header-top">
-            <div class="contact-info">
-                <div class="phone">
-                    <img src="https://img.icons8.com/ios/452/phone.png " alt="Phone Icon" class="icon">
-                    <span>+1 (123) 456-7890</span>
+            <div class="container">
+                <div class="company-logo">
+                    <div class="company-name"><a href="index.html">Pingpro Digicomm</a></div>
+                    <div class="company-tagline">Connect. Communicate. Innovate.</div>
+                    <img src="images/logo.png" alt="Pingpro Logo" class="company-logo-img">
                 </div>
-                <div class="email">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" class="icon">
-                    <span>business@pingpro.in</span>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="images/phone-icon.png" alt="Phone Icon">
+                        <span>+91 9654717478</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/email-icon.png" alt="Email Icon">
+                        <span>business@pingpro.in</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Navigation Menu -->
         <nav>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="services.html">Services</a></li>
-            </ul>
+            <div class="container">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
     <main>
-        <section class="contact">
-            <h1>Contact Us</h1>
-            <p>If you have any questions, feel free to reach out to us!</p>
-            <!-- Contact Form -->
-            <form action="https://formspree.io/f/mwpleqyw" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                
-                <button type="submit">Send Message</button>
-            </form>
+        <section class="hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Ready to revolutionize your communication landscape?</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-intro">
+                    <div class="contact-benefits">
+                        <div class="benefit-item">
+                            <h3>Discover the ultimate solution</h3>
+                            <p>Tailored to your specific requirements</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Uncover the perfect match</h3>
+                            <p>That fits your individual needs</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Unlock the ideal price</h3>
+                            <p>For your desired product</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section" id="contact-form">
+                    <h2>Get in Touch</h2>
+                    <p>Fill out the form below and we'll get back to you shortly.</p>
+                    <form class="contact-form" action="https://formsubmit.co/business@pingpro.in" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-size">Company Size</label>
+                            <select id="company-size" name="company-size">
+                                <option value="">Select Company Size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-500">201-500 employees</option>
+                                <option value="501+">501+ employees</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Inquiry *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <option value="voice">Voice Solutions</option>
+                                <option value="sms">SMS Services</option>
+                                <option value="cloud">Cloud Communication</option>
+                                <option value="whatsapp">WhatsApp Business</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-info-grid">
+                        <div class="contact-info-item">
+                            <h3>Help And Support</h3>
+                            <div class="info-block">
+                                <h4>Support</h4>
+                                <p>+91 9654717478</p>
+                            </div>
+                            <div class="info-block">
+                                <h4>Email</h4>
+                                <p>business@pingpro.in</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3>Our Office Location</h3>
+                            <div class="info-block">
+                                <h4>Head Office</h4>
+                                <p>First Floor, ADD India Tower, Plot No. A-6A,<br>Sector-125, Noida, 201303<br>Uttar Pradesh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 PingPro DigiComm. All rights reserved.</p>
-        <a href="#top" class="back-to-top">Back to top</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="PingPro DigiComm Logo" class="footer-logo-img">
+                        <div class="footer-company-info">
+                            <h4>PingPro DigiComm</h4>
+                            <p>Connect. Communicate. Innovate.</p>
+                        </div>
+                    </div>
+                    <p>Empowering businesses with cutting-edge communication solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Voice</a></li>
+                        <li><a href="#">SMS</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 PingPro DigiComm. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook"></a>
+        <a href="https://twitter.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/company/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"></a>
+    </div>
 </body>
 
 </html>
