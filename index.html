@@ -138,28 +138,43 @@
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <div class="contact-item">
-                        <a href="mailto:business@pingpro.in">
-                            <span class="icon-email"></span>
-                            <span class="email-text">business@pingpro.in</span>
-                        </a>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter"></a>
-                        <a href="https://www.linkedin.com/company/106420780/admin/dashboard/" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
-                        <a href="https://www.instagram.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"></a>
-                    </div>
-                </div>
             </div>
             <div class="footer-copyright">
                 <p>&copy; 2024 PingPro DigiComm. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" title="Back to Top">↑</button>
+
+    <div class="floating-phone">
+        <div class="phone-link">
+            <div class="phone-icon">
+                <i class="icon-phone"></i>
+            </div>
+            <div class="phone-text">Call Us</div>
+        </div>
+        <!-- Popup Form -->
+        <div class="call-popup" id="callPopup">
+            <div class="call-popup-content">
+                <button class="close-popup" id="closePopupBtn">&times;</button>
+                <h2>Do you want us to call you?</h2>
+                <form id="callbackForm">
+                    <div class="form-group">
+                        <div class="phone-input-wrapper">
+                            <span class="phone-icon"></span>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone number" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">CALL ME NOW</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Carousel functionality
             const slides = document.querySelectorAll('.carousel-slide');
             const indicators = document.querySelectorAll('.indicator');
             let currentSlide = 0;
@@ -187,7 +202,7 @@
                 clearInterval(slideInterval);
             }
 
-            // Event Listeners
+            // Event Listeners for carousel
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
                     showSlide(index);
@@ -198,6 +213,60 @@
 
             // Start the slideshow
             startSlideShow();
+
+            // Call Us Popup functionality
+            const callPopup = document.getElementById('callPopup');
+            const closePopupBtn = document.getElementById('closePopupBtn');
+            const floatingPhone = document.querySelector('.floating-phone');
+            const phoneLink = document.querySelector('.phone-link');
+            const callbackForm = document.getElementById('callbackForm');
+
+            // Open popup when clicking the floating phone button
+            phoneLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                callPopup.classList.add('active');
+            });
+
+            // Close popup when clicking the close button
+            closePopupBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                callPopup.classList.remove('active');
+            });
+
+            // Close popup when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === callPopup) {
+                    callPopup.classList.remove('active');
+                }
+            });
+
+            // Handle form submission
+            callbackForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const phoneNumber = document.getElementById('phoneNumber').value;
+                alert('We will call you shortly at: ' + phoneNumber);
+                callPopup.classList.remove('active');
+                callbackForm.reset();
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>

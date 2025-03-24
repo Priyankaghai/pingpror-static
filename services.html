@@ -187,26 +187,34 @@
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <div class="contact-item">
-                        <a href="mailto:business@pingpro.in">
-                            <span class="icon-email"></span>
-                            <span class="email-text">business@pingpro.in</span>
-                        </a>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter"></a>
-                        <a href="https://www.linkedin.com/company/106420780/admin/dashboard/" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
-                        <a href="https://www.instagram.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"></a>
-                    </div>
-                </div>
             </div>
             <div class="footer-copyright">
                 <p>&copy; 2024 PingPro DigiComm. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
