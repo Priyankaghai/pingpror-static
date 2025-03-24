@@ -13,7 +13,7 @@
     --text-light: #5E6C84;
     --white: #FFFFFF;
     --light-bg: #F4F5F7;
-    --header-height: 130px; /* Adjust this value based on your header's actual height */
+    --header-height: 130px; /* Updated to match the actual header height */
 }
 
 /* General styles for the body */
@@ -38,6 +38,8 @@ header {
     background-color: var(--primary-color);
     padding: 8px 0;
     color: var(--white);
+    position: relative;
+    z-index: 1001;
 }
 
 .container {
@@ -200,73 +202,67 @@ header {
     }
 }
 
-/* Navigation */
+/* Navigation Styles */
 nav {
     background: var(--white);
-    padding: 15px 0;
-}
-
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
-    align-items: center;
+    height: 60px;
 }
 
 .navbar li {
-    margin: 0;
-    padding: 0;
+    margin: 0 20px;
 }
 
 .navbar a {
     color: var(--text-dark);
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: all 0.3s;
-    display: block;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s;
 }
 
 .navbar a:hover {
     color: var(--primary-color);
-    background: rgba(0, 82, 204, 0.1);
 }
 
-.navbar .btn {
-    padding: 8px 20px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.navbar .btn:hover {
-    background-color: var(--accent-color);
-    color: var(--white);
-    transform: translateY(-2px);
+.navbar a:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        gap: 15px;
-        justify-content: center;
+        height: 50px;
     }
-
+    
+    .navbar li {
+        margin: 0 15px;
+    }
+    
     .navbar a {
-        padding: 6px 12px;
-        font-size: 14px;
+        font-size: 0.9rem;
     }
 }
 
@@ -1092,49 +1088,47 @@ html {
 .floating-phone .phone-link {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
-    background: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 82, 204, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background: var(--white);
 }
 
 .floating-phone .phone-link:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 82, 204, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.floating-phone .phone-link:active {
+    transform: translateY(-3px);
 }
 
 .floating-phone .phone-icon {
     width: 32px;
     height: 32px;
-    background: var(--white);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
     pointer-events: none;
 }
 
-.floating-phone .phone-text {
-    color: var(--white);
-    font-weight: 600;
-    font-size: 0.9rem;
-    pointer-events: none;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+.floating-phone .phone-icon i {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E") no-repeat center;
 }
 
 @media (max-width: 768px) {
@@ -1142,18 +1136,17 @@ html {
         bottom: 20px;
         left: 20px;
     }
-
     .floating-phone .phone-link {
-        padding: 8px 16px;
+        width: 45px;
+        height: 45px;
     }
-
     .floating-phone .phone-icon {
         width: 28px;
         height: 28px;
     }
-
-    .floating-phone .phone-text {
-        font-size: 0.85rem;
+    .floating-phone .phone-icon i {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -1324,5 +1317,37 @@ footer .social-icons img {
 }
 
 main {
-    padding-top: var(--header-height); /* Add padding to main content */
+    padding-top: 130px; /* Adjust this value based on your header's actual height */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+}
+
+.header.visible {
+    transform: translateY(0);
 }

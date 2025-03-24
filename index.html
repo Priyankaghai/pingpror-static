@@ -152,7 +152,6 @@
             <div class="phone-icon">
                 <i class="icon-phone"></i>
             </div>
-            <div class="phone-text">Call Us</div>
         </div>
         <!-- Popup Form -->
         <div class="call-popup" id="callPopup">
@@ -214,58 +213,72 @@
             // Start the slideshow
             startSlideShow();
 
-            // Call Us Popup functionality
+            // Call Popup Functionality
+            const floatingPhone = document.querySelector('.floating-phone');
             const callPopup = document.getElementById('callPopup');
             const closePopupBtn = document.getElementById('closePopupBtn');
-            const floatingPhone = document.querySelector('.floating-phone');
-            const phoneLink = document.querySelector('.phone-link');
             const callbackForm = document.getElementById('callbackForm');
 
-            // Open popup when clicking the floating phone button
-            phoneLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                callPopup.classList.add('active');
-            });
+            if (floatingPhone && callPopup && closePopupBtn && callbackForm) {
+                // Open popup when clicking the floating phone button
+                floatingPhone.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    callPopup.classList.add('active');
+                });
 
-            // Close popup when clicking the close button
-            closePopupBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                callPopup.classList.remove('active');
-            });
-
-            // Close popup when clicking outside
-            window.addEventListener('click', function(e) {
-                if (e.target === callPopup) {
+                // Close popup when clicking the close button
+                closePopupBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     callPopup.classList.remove('active');
+                });
+
+                // Close popup when clicking outside
+                window.addEventListener('click', function(e) {
+                    if (e.target === callPopup) {
+                        callPopup.classList.remove('active');
+                    }
+                });
+
+                // Prevent closing when clicking inside the popup content
+                callPopup.querySelector('.call-popup-content').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+
+                // Handle form submission
+                callbackForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const phoneNumber = document.getElementById('phoneNumber').value;
+                    
+                    // Here you can handle the phone number
+                    // For example, send it to your server or display it
+                    console.log('Customer phone number:', phoneNumber);
+                    
+                    // Show success message
+                    alert('Thank you! We will call you at ' + phoneNumber);
+                    
+                    // Reset form and close popup
+                    callbackForm.reset();
+                    callPopup.classList.remove('active');
+                });
+            }
+
+            // Back to Top Button
+            const backToTop = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
                 }
             });
-
-            // Handle form submission
-            callbackForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const phoneNumber = document.getElementById('phoneNumber').value;
-                alert('We will call you shortly at: ' + phoneNumber);
-                callPopup.classList.remove('active');
-                callbackForm.reset();
-            });
-        });
-
-        // Back to Top Button
-        const backToTop = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-        
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
