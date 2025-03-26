@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PingPro DigiComm - Cloud Communication Platform</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -14,19 +15,23 @@
         <div class="header-top">
             <div class="container">
                 <div class="company-logo">
-                    <div class="company-name"><a href="index.html">Pingpro Digicomm</a></div>
-                    <div class="company-tagline">Connect. Communicate. Innovate.</div>
                     <img src="images/logo.png" alt="Pingpro Logo" class="company-logo-img">
+                    <div class="company-name-section">
+                        <div class="company-name"><a href="index.html"><span class="primary">Pingpro</span> <span class="secondary">Digicomm</span></a></div>
+                        <div class="company-tagline">Connect. Communicate. Innovate.</div>
+                    </div>
                 </div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <img src="images/email-icon.png" alt="Email Icon">
-                        <span>business@pingpro.in</span>
+                        <a href="mailto:business@pingpro.in">
+                            <span class="icon-email"></span>
+                            business@pingpro.in
+                        </a>
                     </div>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook"></a>
                         <a href="https://twitter.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter"></a>
-                        <a href="https://www.linkedin.com/company/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://www.linkedin.com/company/106420780/admin/dashboard/" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
                         <a href="https://www.instagram.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"></a>
                     </div>
                 </div>
@@ -47,8 +52,27 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Transform Your Business Communication</h1>
-                <p>Transform your business communication with our cutting-edge solutions. Experience seamless integration, reliable delivery, and exceptional support.</p>
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <h1>Transform Your Business Communication</h1>
+                            <p>Transform your business communication with our cutting-edge solutions. Experience seamless integration, reliable delivery, and exceptional support.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <h1>Enterprise-Grade Voice Solutions</h1>
+                            <p>Experience crystal clear audio quality with our enterprise-grade voice calling solutions. Perfect for businesses of all sizes.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <h1>Reliable SMS Services</h1>
+                            <p>Reach your customers instantly with our reliable SMS delivery platform. High deliverability rates and real-time tracking.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                        <button class="indicator" data-slide="2"></button>
+                    </div>
+                </div>
                 <div class="hero-buttons">
                     <a href="contact.html#contact-form" class="btn btn-primary">Get Started</a>
                     <a href="services.html" class="btn btn-secondary">Learn More</a>
@@ -120,6 +144,144 @@
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" title="Back to Top">↑</button>
+
+    <div class="floating-phone">
+        <div class="phone-link">
+            <div class="phone-icon">
+                <i class="icon-phone"></i>
+            </div>
+        </div>
+        <!-- Popup Form -->
+        <div class="call-popup" id="callPopup">
+            <div class="call-popup-content">
+                <button class="close-popup" id="closePopupBtn">&times;</button>
+                <h2>Do you want us to call you?</h2>
+                <form id="callbackForm">
+                    <div class="form-group">
+                        <div class="phone-input-wrapper">
+                            <span class="phone-icon"></span>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone number" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">CALL ME NOW</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carousel functionality
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopSlideShow() {
+                clearInterval(slideInterval);
+            }
+
+            // Event Listeners for carousel
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                    stopSlideShow();
+                    startSlideShow();
+                });
+            });
+
+            // Start the slideshow
+            startSlideShow();
+
+            // Call Popup Functionality
+            const floatingPhone = document.querySelector('.floating-phone');
+            const callPopup = document.getElementById('callPopup');
+            const closePopupBtn = document.getElementById('closePopupBtn');
+            const callbackForm = document.getElementById('callbackForm');
+
+            if (floatingPhone && callPopup && closePopupBtn && callbackForm) {
+                // Open popup when clicking the floating phone button
+                floatingPhone.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    callPopup.classList.add('active');
+                });
+
+                // Close popup when clicking the close button
+                closePopupBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    callPopup.classList.remove('active');
+                });
+
+                // Close popup when clicking outside
+                window.addEventListener('click', function(e) {
+                    if (e.target === callPopup) {
+                        callPopup.classList.remove('active');
+                    }
+                });
+
+                // Prevent closing when clicking inside the popup content
+                callPopup.querySelector('.call-popup-content').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+
+                // Handle form submission
+                callbackForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const phoneNumber = document.getElementById('phoneNumber').value;
+                    
+                    // Here you can handle the phone number
+                    // For example, send it to your server or display it
+                    console.log('Customer phone number:', phoneNumber);
+                    
+                    // Show success message
+                    alert('Thank you! We will call you at ' + phoneNumber);
+                    
+                    // Reset form and close popup
+                    callbackForm.reset();
+                    callPopup.classList.remove('active');
+                });
+            }
+
+            // Back to Top Button
+            const backToTop = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+            
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

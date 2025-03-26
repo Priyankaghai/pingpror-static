@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - PingPro DigiComm</title>
+    <title>Contact - PingPro DigiComm</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -14,18 +15,24 @@
         <div class="header-top">
             <div class="container">
                 <div class="company-logo">
-                    <div class="company-name"><a href="index.html">Pingpro Digicomm</a></div>
-                    <div class="company-tagline">Connect. Communicate. Innovate.</div>
                     <img src="images/logo.png" alt="Pingpro Logo" class="company-logo-img">
+                    <div class="company-name-section">
+                        <div class="company-name"><a href="index.html"><span class="primary">Pingpro</span> <span class="secondary">Digicomm</span></a></div>
+                        <div class="company-tagline">Connect. Communicate. Innovate.</div>
+                    </div>
                 </div>
                 <div class="contact-info">
                     <div class="contact-item">
-                        <img src="images/phone-icon.png" alt="Phone Icon">
-                        <span>+91 9654717478</span>
+                        <a href="mailto:business@pingpro.in">
+                            <span class="icon-email"></span>
+                            <span class="email-text">business@pingpro.in</span>
+                        </a>
                     </div>
-                    <div class="contact-item">
-                        <img src="images/email-icon.png" alt="Email Icon">
-                        <span>business@pingpro.in</span>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook"></a>
+                        <a href="https://twitter.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.linkedin.com/company/106420780/admin/dashboard/" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://www.instagram.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"></a>
                     </div>
                 </div>
             </div>
@@ -43,10 +50,10 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero contact-hero">
             <div class="container">
                 <h1>Contact Us</h1>
-                <p>Ready to revolutionize your communication landscape?</p>
+                <p>Get in touch with us to transform your business communication.</p>
             </div>
         </section>
 
@@ -122,24 +129,37 @@
                 <div class="contact-details">
                     <div class="contact-info-grid">
                         <div class="contact-info-item">
-                            <h3>Help And Support</h3>
+                            <h3><span class="icon-support"></span>Help And Support</h3>
                             <div class="info-block">
                                 <h4>Support</h4>
-                                <p>+91 9654717478</p>
+                                <p><span class="icon-phone"></span>+91 9654717478</p>
                             </div>
                             <div class="info-block">
                                 <h4>Email</h4>
-                                <p>business@pingpro.in</p>
+                                <p><a href="mailto:business@pingpro.in" class="email-link"><span class="icon-email"></span>business@pingpro.in</a></p>
                             </div>
                         </div>
                         <div class="contact-info-item">
-                            <h3>Our Office Location</h3>
+                            <h3><span class="icon-location"></span>Our Office Location</h3>
                             <div class="info-block">
                                 <h4>Head Office</h4>
-                                <p>First Floor, ADD India Tower, Plot No. A-6A,<br>Sector-125, Noida, 201303<br>Uttar Pradesh</p>
+                                <p>B-9/11, Shivkala, Sector 62, Noida</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0244536553567!2d77.36493487537754!3d28.62729167565455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce50681005277%3A0x8346a7ab13a91c87!2sSector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309!5e0!3m2!1sen!2sin!4v1710400844611!5m2!1sen!2sin"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -189,12 +209,27 @@
         </div>
     </footer>
 
-    <div class="social-icons">
-        <a href="https://www.facebook.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook"></a>
-        <a href="https://twitter.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/twitter.png" alt="Twitter"></a>
-        <a href="https://www.linkedin.com/company/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://www.instagram.com/pingprodigicomm" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram"></a>
-    </div>
+    <button class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
