@@ -1,0 +1,1 @@
+# pingpro-static

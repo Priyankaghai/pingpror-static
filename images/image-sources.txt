@@ -1,0 +1,48 @@
+Service Images:
+1. voice-solution.jpg
+   - Source: https://images.unsplash.com/photo-1552581234-26160f608093
+   - Description: Modern office with people on phone calls
+   - Size: 800x600px
+
+2. sms-service.jpg
+   - Source: https://images.unsplash.com/photo-1556155092-490a1ba16284
+   - Description: Mobile phone showing SMS interface
+   - Size: 800x600px
+
+3. cloud-comm.jpg
+   - Source: https://images.unsplash.com/photo-1451187580459-43490279c0fa
+   - Description: Cloud computing and digital network concept
+   - Size: 800x600px
+
+4. whatsapp-business.jpg
+   - Source: https://images.unsplash.com/photo-1556155092-490a1ba16284
+   - Description: Business communication through messaging apps
+   - Size: 800x600px
+
+About Page Images:
+1. office.jpg
+   - Source: https://images.unsplash.com/photo-1497366216548-37526070297c
+   - Description: Modern office space with workstations
+   - Size: 800x600px
+
+2. team.jpg
+   - Source: https://images.unsplash.com/photo-1522071820081-009f0129c71c
+   - Description: Diverse team in a meeting
+   - Size: 800x600px
+
+3. technology.jpg
+   - Source: https://images.unsplash.com/photo-1518770660439-4636190af475
+   - Description: Technology infrastructure and servers
+   - Size: 800x600px
+
+4. culture.jpg
+   - Source: https://images.unsplash.com/photo-1522071820081-009f0129c71c
+   - Description: Team collaboration and company culture
+   - Size: 800x600px
+
+Instructions:
+1. Download these images from Unsplash
+2. Resize them to 800x600px for optimal web performance
+3. Save them in the images directory with the specified filenames
+4. Ensure all images are in JPG format
+5. Optimize the images for web use (compress them) 
