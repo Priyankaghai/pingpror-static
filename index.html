@@ -31,10 +31,10 @@
         <div class="header-top">
             <div class="container">
                 <div class="company-logo">
-                    <img src="images/logo.png" alt="Pingpro Logo" class="company-logo-img">
                     <div class="company-name-section">
-                        <div class="company-name"><a href="/"><span class="primary">Pingpro</span> <span class="secondary">Digicomm</span></a></div>
-                        <div class="company-tagline">Connect. Communicate. Innovate.</div>
+                        <a href="/">
+                            <img src="images/pingpro-text.png" alt="Pingpro Digicomm" class="company-text-img">
+                        </a>
                     </div>
                 </div>
                 <div class="contact-info">
@@ -215,23 +215,22 @@
                 <button class="close-popup" id="closePopupBtn">&times;</button>
                 <h2>Request a Call</h2>
                 <p>Fill out the form below and we'll call you shortly.</p>
-                <form class="call-form" action="/submit-call-form" method="POST">
+                <form class="call-popup-form" action="/submit-call-form" method="POST">
                     <div class="form-group">
-                        <label for="call-name">Full Name *</label>
-                        <input type="text" id="call-name" name="name" required>
+                        <label for="popup-name">Full Name *</label>
+                        <input type="text" id="popup-name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="call-phone">Phone Number *</label>
-                        <input type="tel" id="call-phone" name="phone" required>
+                        <label for="popup-phone">Phone Number *</label>
+                        <input type="tel" id="popup-phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="preferred-time">Preferred Time to Call</label>
-                        <select id="preferred-time" name="preferred-time">
-                            <option value="">Select Preferred Time</option>
-                            <option value="morning">Morning (9 AM - 12 PM)</option>
-                            <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
-                            <option value="evening">Evening (5 PM - 8 PM)</option>
-                        </select>
+                        <label for="popup-email">Email Address *</label>
+                        <input type="email" id="popup-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="popup-message">Message</label>
+                        <textarea id="popup-message" name="message"></textarea>
                     </div>
                     <button type="submit" class="btn">Request Call</button>
                 </form>
@@ -291,7 +290,7 @@
         const floatingPhone = document.querySelector('.floating-phone');
         const callPopup = document.getElementById('callPopup');
         const closePopupBtn = document.getElementById('closePopupBtn');
-        const callForm = document.querySelector('.call-form');
+        const callForm = document.querySelector('.call-popup-form');
 
         if (floatingPhone && callPopup && closePopupBtn && callForm) {
             // Open popup when clicking the floating phone button
@@ -330,7 +329,7 @@
                 submitButton.disabled = true;
                 
                 // Submit the form using fetch
-                fetch(this.action, {
+                fetch('/submit-call-form', {
                     method: 'POST',
                     body: new FormData(this),
                     headers: {
