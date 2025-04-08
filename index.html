@@ -215,7 +215,12 @@
                 <button class="close-popup" id="closePopupBtn">&times;</button>
                 <h2>Request a Call</h2>
                 <p>Fill out the form below and we'll call you shortly.</p>
-                <form class="call-popup-form" action="/submit-call-form" method="POST">
+                <form class="call-popup-form" action="https://formsubmit.co/business@pingpro.in" method="POST">
+                    <input type="hidden" name="_subject" value="New Call Request from PingPro Website">
+                    <input type="hidden" name="_next" value="https://www.pingpro.in">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Thank you for your call request. We will contact you shortly.">
                     <div class="form-group">
                         <label for="popup-name">Full Name *</label>
                         <input type="text" id="popup-name" name="name" required>
@@ -316,45 +321,6 @@
             // Prevent closing when clicking inside the popup content
             callPopup.querySelector('.call-popup-content').addEventListener('click', function(e) {
                 e.stopPropagation();
-            });
-
-            // Handle call form submission
-            callForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Show loading state
-                const submitButton = this.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
-                
-                // Submit the form using fetch
-                fetch('/submit-call-form', {
-                    method: 'POST',
-                    body: new FormData(this),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Thank you! We will call you shortly.');
-                        callPopup.classList.remove('active');
-                        this.reset();
-                    } else {
-                        throw new Error(data.message || 'Failed to submit call request');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was an error submitting your call request. Please try again or contact us directly at business@pingpro.in');
-                })
-                .finally(() => {
-                    // Reset button state
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                });
             });
         }
     </script>

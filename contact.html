@@ -79,9 +79,9 @@
                 <div class="contact-form-section" id="contact-form">
                     <h2>Get in Touch</h2>
                     <p>Fill out the form below and we'll get back to you shortly.</p>
-                    <form class="contact-form" action="/submit-form" method="POST">
+                    <form class="contact-form" action="https://formsubmit.co/business@pingpro.in" method="POST">
+                        <input type="hidden" name="_next" value="https://www.pingpro.in/thanks">
                         <input type="hidden" name="_subject" value="New Contact Form Submission from PingPro Website">
-                        <input type="hidden" name="_next" value="/thanks">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_autoresponse" value="Thank you for contacting Pingpro Digicomm. We have received your message and will get back to you shortly.">
@@ -236,43 +236,6 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
-            });
-        });
-
-        // Form Submission Handler
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            // Submit the form using fetch
-            fetch('/submit-form', {
-                method: 'POST',
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = '/thanks';
-                } else {
-                    throw new Error(data.message || 'Failed to submit form');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting the form. Please try again or contact us directly at business@pingpro.in');
-            })
-            .finally(() => {
-                // Reset button state
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
             });
         });
     </script>
