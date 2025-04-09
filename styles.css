@@ -1894,3 +1894,79 @@ main {
         font-size: 11px;
     }
 }
+
+/* Thanks Popup Styles */
+.thanks-popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.thanks-popup.active {
+    display: flex;
+}
+
+.thanks-content {
+    padding: 10px;
+    width: 100%;
+}
+
+.thanks-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.thanks-content p {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.thanks-content .btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.thanks-content .btn:hover {
+    background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+    .thanks-popup {
+        width: 90%;
+        max-width: 250px;
+    }
+    
+    .thanks-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .thanks-content p {
+        font-size: 0.85rem;
+    }
+    
+    .thanks-content .btn {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+    }
+}

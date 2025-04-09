@@ -215,7 +215,7 @@
                 <button class="close-popup" id="closePopupBtn">&times;</button>
                 <h2>Request a Call</h2>
                 <p>Fill out the form below and we'll call you shortly.</p>
-                <form class="call-popup-form" action="https://formsubmit.co/business@pingpro.in" method="POST">
+                <form class="call-popup-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST" id="callRequestForm">
                     <input type="hidden" name="_subject" value="New Call Request from PingPro Website">
                     <input type="hidden" name="_next" value="https://www.pingpro.in">
                     <input type="hidden" name="_template" value="table">
@@ -239,6 +239,15 @@
                     </div>
                     <button type="submit" class="btn">Request Call</button>
                 </form>
+                
+                <!-- Thanks Popup -->
+                <div class="thanks-popup" id="thanksPopup">
+                    <div class="thanks-content">
+                        <h3>Thank You!</h3>
+                        <p>Your call request has been submitted successfully. We will contact you shortly.</p>
+                        <button class="btn" id="closeThanksBtn">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -296,6 +305,8 @@
         const callPopup = document.getElementById('callPopup');
         const closePopupBtn = document.getElementById('closePopupBtn');
         const callForm = document.querySelector('.call-popup-form');
+        const thanksPopup = document.getElementById('thanksPopup');
+        const closeThanksBtn = document.getElementById('closeThanksBtn');
 
         if (floatingPhone && callPopup && closePopupBtn && callForm) {
             // Open popup when clicking the floating phone button
@@ -322,6 +333,23 @@
             callPopup.querySelector('.call-popup-content').addEventListener('click', function(e) {
                 e.stopPropagation();
             });
+            
+            // Handle form submission
+            callForm.addEventListener('submit', function(e) {
+                // Don't prevent default to allow form submission
+                // Show thanks popup after a short delay
+                setTimeout(function() {
+                    thanksPopup.classList.add('active');
+                }, 500);
+            });
+            
+            // Close thanks popup when clicking the close button
+            if (closeThanksBtn) {
+                closeThanksBtn.addEventListener('click', function() {
+                    thanksPopup.classList.remove('active');
+                    callPopup.classList.remove('active');
+                });
+            }
         }
     </script>
 </body>
