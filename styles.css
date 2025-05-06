@@ -293,13 +293,7 @@ nav {
 }
 
 /* Hero Section */
-.hero, .hero * {
-    display: block !important;
-    opacity: 1 !important;
-    color: #fff !important;
-    position: static !important;
-    z-index: 1 !important;
-}
+/* .hero, .hero * { ... } -- removed */
 
 /* Ensure hero content is never hidden behind the fixed header */
 main > .hero:first-child {
@@ -349,6 +343,14 @@ main > .hero:first-child {
     padding: 0 60px;
 }
 
+.slide-content h1,
+.slide-content p {
+    color: #fff;
+    opacity: 1;
+    z-index: 2;
+    position: relative;
+}
+
 .carousel-slide::before {
     content: '';
     position: absolute;
@@ -356,7 +358,7 @@ main > .hero:first-child {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.15));
     z-index: 1;
 }
 
@@ -2016,8 +2018,4 @@ main {
   main {
     padding-top: 210px;
   }
-}
-
-.hero .slide-content, .hero h1, .hero p {
-  border: 2px solid red !important;
 }
