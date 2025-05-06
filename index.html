@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>&copy; 2024 PingPro DigiComm. All rights reserved.</p>
+                <p>&copy; 2024 PingPro DigiComm. <span class="footer-mobile-break">All rights reserved</span></p>
             </div>
         </div>
     </footer>
@@ -351,6 +351,22 @@
                 });
             }
         }
+
+        function adjustMainPadding() {
+            var header = document.querySelector('header');
+            var main = document.querySelector('main');
+            if (header && main) {
+                var headerHeight = header.offsetHeight;
+                main.style.paddingTop = headerHeight + 'px';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', adjustMainPadding);
+        window.addEventListener('resize', adjustMainPadding);
+        window.addEventListener('orientationchange', adjustMainPadding);
+        window.addEventListener('load', function() {
+            adjustMainPadding();
+            setTimeout(adjustMainPadding, 100);
+        });
     </script>
 </body>
 

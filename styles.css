@@ -94,17 +94,36 @@ header {
 }
 
 @media (max-width: 768px) {
+    .header-top .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0 8px;
+    }
+    
     .company-text-img {
-        width: 252px;
+        width: 180px;
+        max-width: 100%;
+        height: auto;
     }
     
-    .company-tagline {
-        font-size: 1rem;
-        letter-spacing: 1px;
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
     }
     
-    .header-top {
-        padding: 16px 0;
+    .contact-item {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .header-top .social-icons {
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+        margin-top: 4px;
     }
 }
 
@@ -259,11 +278,13 @@ nav {
 
 @media (max-width: 768px) {
     .navbar {
-        height: 50px;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
     }
-    
     .navbar li {
-        margin: 0 15px;
+        margin: 0 8px;
     }
     
     .navbar a {
@@ -272,12 +293,24 @@ nav {
 }
 
 /* Hero Section */
+.hero, .hero * {
+    display: block !important;
+    opacity: 1 !important;
+    color: #fff !important;
+    position: static !important;
+    z-index: 1 !important;
+}
+
+/* Ensure hero content is never hidden behind the fixed header */
+main > .hero:first-child {
+    margin-top: 0 !important;
+}
+
 .hero {
     padding: 0;
     background-color: var(--light-bg);
     position: relative;
     overflow: hidden;
-    margin-top: 0;
     width: 100%;
 }
 
@@ -833,12 +866,16 @@ footer {
 @media (max-width: 768px) {
     .header-top .container {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        gap: 12px;
+        padding: 0 8px;
     }
     
     .navbar {
-        flex-direction: column;
+        flex-direction: row !important;
+        justify-content: center;
         align-items: center;
+        gap: 16px;
     }
     
     .hero h1 {
@@ -887,8 +924,14 @@ footer {
 
     .contact-info {
         flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .contact-item {
+        justify-content: center;
+        width: 100%;
     }
 
     .social-icons {
@@ -1262,22 +1305,6 @@ footer .social-icons img {
         height: 40px;
         font-size: 20px;
         line-height: 40px;
-    }
-}
-
-main {
-    padding-top: 130px; /* Adjust this value based on your header's actual height */
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
     }
 }
 
@@ -1969,4 +1996,28 @@ main {
         padding: 7px 12px;
         font-size: 0.85rem;
     }
+}
+
+.footer-mobile-break {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .footer-mobile-break {
+        display: block;
+    }
+}
+
+main {
+  padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 210px;
+  }
+}
+
+.hero .slide-content, .hero h1, .hero p {
+  border: 2px solid red !important;
 }
