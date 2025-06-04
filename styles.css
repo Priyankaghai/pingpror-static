@@ -6,13 +6,13 @@
 }
 
 :root {
-    --primary-color: #0052CC;
-    --secondary-color: #253858;
-    --accent-color: #00B8D9;
-    --text-dark: #172B4D;
-    --text-light: #5E6C84;
+    --primary-color: #6B46C1;   /* Main purple */
+    --secondary-color: #805AD5; /* Lighter purple for accents */
+    --accent-color: #9F7AEA;    /* Bright accent purple */
+    --text-dark: #2D3748;       /* Very dark gray for text */
+    --text-light: #718096;      /* Medium gray for secondary text */
     --white: #FFFFFF;
-    --light-bg: #F4F5F7;
+    --light-bg: #F7FAFC;        /* Very light gray background */
     --header-height: 130px;
 }
 
@@ -21,12 +21,12 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--white);
+    background-color: var(--light-bg);
 }
 
 /* Header Section */
 header {
-    background-color: var(--white);
+    background-color: var(--primary-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -35,9 +35,9 @@ header {
 }
 
 .header-top {
-    background-color: var(--primary-color);
+    background-color: var(--white) !important;
+    color: var(--primary-color) !important;
     padding: 16px 0;
-    color: var(--white);
     position: relative;
     z-index: 1001;
 }
@@ -84,13 +84,19 @@ header {
     background: transparent;
 }
 
-.company-tagline {
-    color: var(--white);
-    font-size: 1.2rem;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
+.company-tagline,
+.header-top .contact-item a,
+.header-top .social-icon img {
+    color: var(--primary-color) !important;
+    fill: var(--primary-color) !important;
+}
+
+.header-top .social-icon img {
+    filter: none !important;
+}
+
+.header-top .icon-email {
+    background-color: var(--primary-color) !important;
 }
 
 @media (max-width: 768px) {
@@ -228,7 +234,7 @@ header {
 
 /* Navigation Styles */
 nav {
-    background: var(--white);
+    background: var(--primary-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1000;
@@ -249,7 +255,7 @@ nav {
 }
 
 .navbar a {
-    color: var(--text-dark);
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -264,12 +270,12 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: var(--accent-color);
     transition: width 0.3s;
 }
 
 .navbar a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .navbar a:hover::after {
@@ -786,8 +792,8 @@ footer {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
     font-size: 1rem;
     color: var(--text-dark);
     background: var(--white);
@@ -797,7 +803,7 @@ footer {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: var(--primary-color);
+    border-color: var(--accent-color);
     outline: none;
 }
 
@@ -1221,8 +1227,8 @@ html {
 .phone-input-wrapper input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
     font-size: 1rem;
 }
 
@@ -1328,7 +1334,7 @@ footer .social-icons img {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--white);
+    background: var(--primary-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
@@ -2023,7 +2029,7 @@ footer .social-icons img {
 }
 
 main {
-  padding-top: 120px;
+  padding-top: 100px !important;
 }
 
 @media (max-width: 768px) {
@@ -2056,4 +2062,102 @@ main {
     max-width: 320px;
     font-size: 1.1rem;
   }
+}
+
+/* --- Refined Navbar Styles for Modern Look --- */
+.main-navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 80px;
+}
+
+.navbar-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 48px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  background: none !important;
+  padding: 0;
+  transition: color 0.2s;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.navbar-links a:hover {
+  color: #6B46C1;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6B46C1 !important;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  transition: background 0.2s;
+}
+
+.icon-circle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-circle:hover {
+  background: #4b287a !important;
+}
+
+@media (max-width: 900px) {
+  .navbar-container {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 8px;
+    gap: 12px;
+  }
+  .navbar-links {
+    gap: 18px;
+  }
+  .navbar-logo img {
+    height: 32px;
+  }
+}
+/* --- End Refined Navbar Styles --- */
+
+/* Remove any background from navbar links and container */
+.navbar-links,
+.navbar-links a {
+  background: none !important;
+  box-shadow: none !important;
 }
