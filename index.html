@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -28,124 +29,149 @@
     </div>
 
     <header class="main-navbar">
-      <div class="navbar-container">
-        <div class="navbar-logo">
-          <a href="/">
-            <img src="images/pingpro-text.png" alt="Pingpro Digicomm" class="company-text-img" />
-          </a>
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="/">
+                    <img src="images/pingpro-logo.png" alt="Pingpro Digicomm Logo" class="company-text-img" />
+                </a>
+            </div>
+            <nav class="navbar-links">
+                <a href="/">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/services">Services</a>
+                <a href="/why-us">Why Us</a>
+                <a href="/process">Process</a>
+                <a href="/industries">Industries</a>
+                <a href="/testimonials">Testimonials</a>
+                <a href="/contact">Contact Us</a>
+            </nav>
+            <div class="navbar-icons">
+                <a href="tel:1234567890" class="icon-circle" title="Call">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
         </div>
-        <nav class="navbar-links">
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/services">Services</a>
-          <a href="/contact">Contact Us</a>
-        </nav>
-        <div class="navbar-icons">
-          <a href="tel:1234567890" class="icon-circle" title="Call">
-            <!-- Phone Icon (white) -->
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="12" fill="#6B46C1"/>
-              <path d="M17.707 15.293l-2.387-2.387a1 1 0 0 0-1.414 0l-.793.793a8.014 8.014 0 0 1-3.293-3.293l.793-.793a1 1 0 0 0 0-1.414l-2.387-2.387a1 1 0 0 0-1.414 0l-1.293 1.293a2 2 0 0 0-.293 2.293c1.12 2.24 2.88 4 5.12 5.12a2 2 0 0 0 2.293-.293l1.293-1.293a1 1 0 0 0 0-1.414z" fill="#fff"/>
-            </svg>
-          </a>
-          <a href="https://wa.me/1234567890" class="icon-circle" title="WhatsApp" target="_blank">
-            <!-- WhatsApp Icon (white) -->
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="12" fill="#6B46C1"/>
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.967-.94 1.166-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.372.71.306 1.263.489 1.695.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/>
-            </svg>
-          </a>
-        </div>
-      </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="carousel">
-                <div class="carousel-container">
-                    <div class="carousel-slide active" style="background-image: url('images/hero-1.jpg');">
-                        <div class="slide-content">
-                            <h1>Transform Your Business Communication</h1>
-                            <p>Transform your business communication with our cutting-edge solutions. Experience seamless integration, reliable delivery, and exceptional support.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide" style="background-image: url('images/hero-2.jpg');">
-                        <div class="slide-content">
-                            <h1>Enterprise-Grade Voice Solutions</h1>
-                            <p>Experience crystal clear audio quality with our enterprise-grade voice calling solutions. Perfect for businesses of all sizes.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide" style="background-image: url('images/hero-3.jpg');">
-                        <div class="slide-content">
-                            <h1>Reliable SMS Services</h1>
-                            <p>Reach your customers instantly with our reliable SMS delivery platform. High deliverability rates and real-time tracking.</p>
-                        </div>
-                    </div>
+            <div class="hero-content">
+                <h1>We Help you acquire a<br><span class="highlight">Powerful Digital Presence</span></h1>
+                <div class="hero-buttons">
+                    <a href="/contact#contact-form" class="btn btn-primary">Get In Touch Now!</a>
                 </div>
-                <div class="carousel-indicators">
-                    <button class="indicator active" data-slide="0"></button>
-                    <button class="indicator" data-slide="1"></button>
-                    <button class="indicator" data-slide="2"></button>
+                <div class="budget-options">
+                    <div class="budget-option">₹1 lac to ₹3 lacs</div>
+                    <div class="budget-option">₹3 lacs to ₹6 lacs</div>
+                    <div class="budget-option">₹6 lacs to ₹10 lacs</div>
+                    <div class="budget-option">₹10 lacs & above</div>
                 </div>
-            </div>
-            <div class="hero-buttons">
-                <a href="/contact#contact-form" class="btn btn-primary">Get Started</a>
-                <a href="/services" class="btn btn-secondary">Learn More</a>
             </div>
         </section>
 
-        <section class="features">
+        <!-- Services Section -->
+        <section class="services">
             <div class="container">
-                <h2>Our Solutions</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Voice Solutions</h3>
-                        <p>Enterprise-grade voice calling solutions with crystal clear audio quality.</p>
+                <h2>WE'VE GOT WHAT YOU NEED!</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Social Media Marketing</h3>
                     </div>
-                    <div class="feature-card">
-                        <h3>SMS Services</h3>
-                        <p>Reach your customers instantly with our reliable SMS delivery platform.</p>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Performance Marketing</h3>
                     </div>
-                    <div class="feature-card">
-                        <h3>Cloud Communication</h3>
-                        <p>Unified communication platform for seamless business operations.</p>
+                    <div class="service-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Search Engine Optimization</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>Content Marketing</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Brand Development</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Videos</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="image-gallery">
+        <!-- Stats Section -->
+        <section class="stats">
             <div class="container">
-                <h2>Our Solutions in Action</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/voice-solution.jpg" alt="Voice Solution">
-                        <div class="gallery-overlay">
-                            <h3>Voice Solutions</h3>
-                            <p>Enterprise-grade voice calling solutions</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>8+</h3>
+                        <p>YEARS OF EXPERIENCE</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>35+</h3>
+                        <p>INDUSTRIES SERVED</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>HAPPY CLIENTS</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5000+</h3>
+                        <p>CUPS OF COFFEE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="why-us">
+            <div class="container">
+                <h2>WHY PINGPRO DIGICOMM?</h2>
+                <p class="subtitle">Because Personalization is at the core of our business.</p>
+                <div class="why-us-content">
+                    <p>Every business requires uniquely carved digital marketing strategies based on the opportunities, competitors & ecosystem it operates in. Our process of curating a digital marketing roadmap starts by listening to your business idea, goals, concerns, etc. followed by extensive research & brainstorming. We keep you in the centre and create digital marketing roadmap which aligns with your short & long term business strategies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>WHAT OUR CLIENTS SAY</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"PingPro is amazing at what they do. They are everything a client looks for in an agency. They enable everything on time and in full. They go above and beyond the responsibilities and bring smiles to our face!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>JOHN DOE</h4>
+                            <p>Chief Manager, Marketing</p>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/sms-service.jpg" alt="SMS Service">
-                        <div class="gallery-overlay">
-                            <h3>SMS Services</h3>
-                            <p>Reliable SMS delivery platform</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/cloud-comm.jpg" alt="Cloud Communication">
-                        <div class="gallery-overlay">
-                            <h3>Cloud Communication</h3>
-                            <p>Unified communication platform</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/whatsapp-business.jpg" alt="WhatsApp Business">
-                        <div class="gallery-overlay">
-                            <h3>WhatsApp Business</h3>
-                            <p>Business messaging solutions</p>
-                        </div>
-                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>WE'RE YOUR PARTNER IN GROWTH!</h2>
+                <div class="cta-features">
+                    <div class="cta-feature">360-degree Digital Solutions</div>
+                    <div class="cta-feature">Mind Grappling Campaigns</div>
+                    <div class="cta-feature">Impactful Visuals & Content</div>
+                    <div class="cta-feature">Personalized Growth Strategies</div>
+                    <div class="cta-feature">Fixed Turnaround Time</div>
+                </div>
+                <div class="cta-offer">
+                    <h3>Get Free* 30 Minutes Consultation & Personalised Plan</h3>
+                    <p class="offer-value">Worth ₹10,000/-</p>
+                    <a href="/contact" class="btn btn-primary">Connect Now</a>
                 </div>
             </div>
         </section>
@@ -162,40 +188,49 @@
                             <p>Connect. Communicate. Innovate.</p>
                         </div>
                     </div>
-                    <p>Empowering businesses with cutting-edge communication solutions.</p>
+                    <p>We are a content-cum-strategy driven digital marketing agency, aiming to provide clients with tailor-made & growth accelerating content.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Company</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/process">Process</a></li>
+                        <li><a href="/industries">Industries</a></li>
+                        <li><a href="/testimonials">Testimonials</a></li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Solutions</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Voice</a></li>
-                        <li><a href="#">SMS</a></li>
-                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="/services#social-media">Social Media Marketing</a></li>
+                        <li><a href="/services#performance">Performance Marketing</a></li>
+                        <li><a href="/services#seo">Search Engine Optimization</a></li>
+                        <li><a href="/services#content">Content Marketing</a></li>
+                        <li><a href="/services#branding">Brand Development</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Blog</a></li>
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Your Address Here</li>
+                        <li><i class="fas fa-phone"></i> +91 1234567890</li>
+                        <li><i class="fas fa-envelope"></i> info@pingpro.in</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>&copy; 2024 PingPro DigiComm. <span class="footer-mobile-break">All rights reserved</span></p>
+                <p>&copy; 2024 PingPro DigiComm. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <button class="back-to-top" title="Back to Top">↑</button>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <div class="floating-phone">
         <div class="phone-link">
