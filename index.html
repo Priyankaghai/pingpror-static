@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PingPro DigiComm - Communication Solutions</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -37,43 +37,51 @@
             </div>
             <nav class="navbar-links">
                 <a href="/">Home</a>
-                <a href="/about">About Us</a>
-                <a href="/services">Services</a>
-                <a href="/why-us">Why Us</a>
-                <a href="/process">Process</a>
-                <a href="/industries">Industries</a>
-                <a href="/testimonials">Testimonials</a>
-                <a href="/contact">Contact Us</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#whyus">Why Us</a>
+                <a href="#process">Process</a>
+                <a href="#industries">Industries</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#hero">Contact Us</a>
             </nav>
             <div class="navbar-icons">
-                <a href="tel:1234567890" class="icon-circle" title="Call">
-                    <i class="fas fa-phone"></i>
-                </a>
+                <a href="#" class="icon-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon-circle" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="icon-circle" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="icon-circle" title="X"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>We Help you acquire a<br><span class="highlight">Powerful Digital Presence</span></h1>
-                <div class="hero-buttons">
-                    <a href="/contact#contact-form" class="btn btn-primary">Get In Touch Now!</a>
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-label">Digital Marketing Agency</div>
+                    <h1><span class="hero-headline-white">We craft a dynamic and impactful</span><br><span class="hero-headline-yellow">digital footprint.</span></h1>
                 </div>
-                <div class="budget-options">
-                    <div class="budget-option">₹1 lac to ₹3 lacs</div>
-                    <div class="budget-option">₹3 lacs to ₹6 lacs</div>
-                    <div class="budget-option">₹6 lacs to ₹10 lacs</div>
-                    <div class="budget-option">₹10 lacs & above</div>
+                <div class="hero-right">
+                    <div class="hero-form-card">
+                        <h2 class="hero-form-title">Get In Touch Now!</h2>
+                        <form class="hero-form" onsubmit="event.preventDefault(); window.location.href='thankyou.html';">
+                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="Last Name" required>
+                            <input type="tel" placeholder="Phone Number" required>
+                            <input type="email" placeholder="Work Email ID" required>
+                            <input type="text" placeholder="Organization" required>
+                            <button type="submit" class="btn btn-primary">Let's Connect</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="services">
+        <section class="services" id="services">
             <div class="container">
-                <h2>WE'VE GOT WHAT YOU NEED!</h2>
+                <h2><span class="highlight-yellow">WE'VE GOT WHAT YOU NEED!</span></h2>
                 <div class="services-grid">
                     <div class="service-card">
                         <i class="fas fa-bullhorn"></i>
@@ -99,12 +107,85 @@
                         <i class="fas fa-video"></i>
                         <h3>Videos</h3>
                     </div>
+                    <div class="service-card">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Influencer Marketing</h3>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Process Section -->
+        <section class="process-section" id="process">
+            <div class="container">
+                <div class="process-title">
+                    <span class="process-title-highlight">THE SECRET IS IN THE PROCESS</span>
+                </div>
+                <div class="process-flow">
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-user-circle"></i></div>
+                        <div class="process-label">Discovery Call</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-search"></i></div>
+                        <div class="process-label">Industry Research</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="process-label">Strategy Development</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="process-label">Roadmap Discussion</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="process-label">Onboarding</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-laptop"></i></div>
+                        <div class="process-label">Execution</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Process Section -->
+
+        <!-- Industries Section -->
+        <section class="industries-section" id="industries">
+            <div class="container industries-container">
+                <div class="industries-left">
+                    <div class="industries-title">
+                        <span class="industries-highlight">INDUSTRIES</span> WE'VE WORKED IN SO FAR!
+                    </div>
+                    <div class="industries-grid">
+                        <div class="industry-card"><i class="fas fa-running"></i><span>Sports</span></div>
+                        <div class="industry-card"><i class="fas fa-coffee"></i><span>Food & Beverage</span></div>
+                        <div class="industry-card"><i class="fas fa-users"></i><span>Parenting</span></div>
+                        <div class="industry-card"><i class="fas fa-city"></i><span>Real Estate</span></div>
+                        <div class="industry-card"><i class="fas fa-couch"></i><span>Interior Design</span></div>
+                        <div class="industry-card"><i class="fas fa-spa"></i><span>Beauty & Wellness</span></div>
+                        <div class="industry-card"><i class="fas fa-project-diagram"></i><span>Coworking</span></div>
+                        <div class="industry-card"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+                        <div class="industry-card"><i class="fas fa-hospital-alt"></i><span>Hospitality</span></div>
+                    </div>
+                    <div class="industries-more">&amp; Many More!</div>
+                </div>
+                <div class="industries-right">
+                    <img src="images/industries-illustration.svg" alt="Industries Illustration" class="industries-illustration industries-illustration-large" />
+                </div>
+            </div>
+        </section>
+        <!-- End Industries Section -->
+
         <!-- Stats Section -->
-        <section class="stats">
+        <section class="stats" id="whyus">
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -124,22 +205,30 @@
                         <p>CUPS OF COFFEE</p>
                     </div>
                 </div>
+                <div class="stats-expert-btn-wrapper">
+                    <a href="#hero" class="btn-expert">Connect with an Expert</a>
+                </div>
             </div>
         </section>
 
         <!-- Why Us Section -->
-        <section class="why-us">
-            <div class="container">
-                <h2>WHY PINGPRO DIGICOMM?</h2>
-                <p class="subtitle">Because Personalization is at the core of our business.</p>
-                <div class="why-us-content">
-                    <p>Every business requires uniquely carved digital marketing strategies based on the opportunities, competitors & ecosystem it operates in. Our process of curating a digital marketing roadmap starts by listening to your business idea, goals, concerns, etc. followed by extensive research & brainstorming. We keep you in the centre and create digital marketing roadmap which aligns with your short & long term business strategies.</p>
+        <section class="why-us" id="about">
+            <div class="container whyus-container">
+                <div class="whyus-image">
+                    <img src="images/whyus-illustration.svg" alt="Why Us Illustration" class="whyus-illustration" />
+                </div>
+                <div class="whyus-content">
+                    <h2>WHY <span class="highlight-yellow">PINGPRO DIGICOMM?</span></h2>
+                    <p class="subtitle">Because Personalization is at the core of our business.</p>
+                    <div class="why-us-content">
+                        <p>Every business requires uniquely carved digital marketing strategies based on the opportunities, competitors & ecosystem it operates in. Our process of curating a digital marketing roadmap starts by listening to your business idea, goals, concerns, etc. followed by extensive research & brainstorming. We keep you in the centre and create digital marketing roadmap which aligns with your short & long term business strategies.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials">
             <div class="container">
                 <h2>WHAT OUR CLIENTS SAY</h2>
                 <div class="testimonials-slider">
@@ -157,129 +246,86 @@
             </div>
         </section>
 
+        <!-- Our Clients Section -->
+        <section class="clients-section">
+            <div class="container">
+                <div class="clients-title">
+                    <span class="clients-title-bg">OUR</span> <span class="clients-title-highlight">CLIENTS</span>
+                </div>
+                <div class="clients-carousel" id="clients-carousel">
+                    <div class="clients-slide active">
+                        <img src="images/clients/apac.png" alt="APAC">
+                        <img src="images/clients/maxlife.png" alt="Max Life">
+                        <img src="images/clients/ciena.png" alt="Ciena">
+                        <img src="images/clients/rajdarbar.png" alt="Rajdarbar Realty">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/clients/chokhidhani.png" alt="Chokhi Dhani">
+                        <img src="images/clients/domino.png" alt="Domino">
+                        <img src="images/clients/oap.png" alt="OAP">
+                        <img src="images/clients/vishwam.png" alt="Vishwam Ayurveda">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/clients/idealspaze.png" alt="Idealspaze">
+                        <img src="images/clients/atulyam.png" alt="Atulyam">
+                        <img src="images/clients/cocacola.png" alt="CocaCola">
+                        <img src="images/clients/rajshila.png" alt="Rajshila">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/clients/counterpoint.png" alt="Counterpoint">
+                        <img src="images/clients/sabrangi.png" alt="Sabrangi">
+                        <img src="images/clients/bamboo.png" alt="The Bamboo Co">
+                        <img src="images/clients/apac.png" alt="APAC">
+                    </div>
+                    <div class="clients-slide">
+                        <img src="images/clients/vglobal.png" alt="V Global">
+                        <img src="images/clients/bahubali-shikanji.png" alt="Bahubali Shikanji">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Clients Section -->
+
         <!-- CTA Section -->
         <section class="cta">
             <div class="container">
-                <h2>WE'RE YOUR PARTNER IN GROWTH!</h2>
+                <h2><span class="highlight-yellow">WE'RE YOUR PARTNER IN GROWTH!</span></h2>
                 <div class="cta-features">
-                    <div class="cta-feature">360-degree Digital Solutions</div>
-                    <div class="cta-feature">Mind Grappling Campaigns</div>
-                    <div class="cta-feature">Impactful Visuals & Content</div>
-                    <div class="cta-feature">Personalized Growth Strategies</div>
-                    <div class="cta-feature">Fixed Turnaround Time</div>
+                    <div class="cta-feature-row">
+                        <div class="cta-feature-btn">360-degree Digital Solutions</div>
+                        <div class="cta-feature-btn">Mind Grappling Campaigns</div>
+                        <div class="cta-feature-btn">Impactful Visuals & Content</div>
+                        <div class="cta-feature-btn">Personalized Growth Strategies</div>
+                    </div>
+                    <div class="cta-feature-center">
+                        <div class="cta-feature-btn">Fixed Turnaround Time</div>
+                    </div>
                 </div>
                 <div class="cta-offer">
                     <h3>Get Free* 30 Minutes Consultation & Personalised Plan</h3>
                     <p class="offer-value">Worth ₹10,000/-</p>
-                    <a href="/contact" class="btn btn-primary">Connect Now</a>
+                    <a href="#hero" class="btn btn-primary">Connect Now</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="PingPro DigiComm Logo" class="footer-logo-img">
-                        <div class="footer-company-info">
-                            <h4>PingPro DigiComm</h4>
-                            <p>Connect. Communicate. Innovate.</p>
-                        </div>
-                    </div>
-                    <p>We are a content-cum-strategy driven digital marketing agency, aiming to provide clients with tailor-made & growth accelerating content.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li><a href="/process">Process</a></li>
-                        <li><a href="/industries">Industries</a></li>
-                        <li><a href="/testimonials">Testimonials</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/services#social-media">Social Media Marketing</a></li>
-                        <li><a href="/services#performance">Performance Marketing</a></li>
-                        <li><a href="/services#seo">Search Engine Optimization</a></li>
-                        <li><a href="/services#content">Content Marketing</a></li>
-                        <li><a href="/services#branding">Brand Development</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Your Address Here</li>
-                        <li><i class="fas fa-phone"></i> +91 1234567890</li>
-                        <li><i class="fas fa-envelope"></i> info@pingpro.in</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 PingPro DigiComm. All rights reserved.</p>
-            </div>
+    <footer class="simple-footer">
+        <div class="footer-description">
+            We are a content-cum-strategy driven digital marketing agency, aiming to provide clients with tailor-made & growth accelerating content.<br>
+            We strive to make you stand out as well as overcome online marketing challenges!
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-address">
+            Address: Sector 62, Noida, Uttar Pradesh 201301, India
         </div>
     </footer>
 
     <button class="back-to-top" title="Back to Top">↑</button>
 
-    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/919958635410" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <div class="floating-phone">
-        <div class="phone-link">
-            <div class="phone-icon">
-                <i class="icon-phone"></i>
-            </div>
-        </div>
-        <!-- Popup Form -->
-        <div class="call-popup" id="callPopup">
-            <div class="call-popup-content">
-                <button class="close-popup" id="closePopupBtn">&times;</button>
-                <h2>Request a Call</h2>
-                <p>Fill out the form below and we'll call you shortly.</p>
-                <form class="call-popup-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST" id="callRequestForm">
-                    <input type="hidden" name="_subject" value="New Call Request from PingPro Website">
-                    <input type="hidden" name="_next" value="https://www.pingpro.in">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse" value="Thank you for your call request. We will contact you shortly.">
-                    <div class="form-group">
-                        <label for="popup-name">Full Name *</label>
-                        <input type="text" id="popup-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="popup-phone">Phone Number *</label>
-                        <input type="tel" id="popup-phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="popup-email">Email Address *</label>
-                        <input type="email" id="popup-email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="popup-message">Message</label>
-                        <textarea id="popup-message" name="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Request Call</button>
-                </form>
-                
-                <!-- Thanks Popup -->
-                <div class="thanks-popup" id="thanksPopup">
-                    <div class="thanks-content">
-                        <h3>Thank You!</h3>
-                        <p>Your call request has been submitted successfully. We will contact you shortly.</p>
-                        <button class="btn" id="closeThanksBtn">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         // Back to Top Button
@@ -329,58 +375,6 @@
         // Show first slide
         showSlide(0);
 
-        // Call Popup Functionality
-        const floatingPhone = document.querySelector('.floating-phone');
-        const callPopup = document.getElementById('callPopup');
-        const closePopupBtn = document.getElementById('closePopupBtn');
-        const callForm = document.querySelector('.call-popup-form');
-        const thanksPopup = document.getElementById('thanksPopup');
-        const closeThanksBtn = document.getElementById('closeThanksBtn');
-
-        if (floatingPhone && callPopup && closePopupBtn && callForm) {
-            // Open popup when clicking the floating phone button
-            floatingPhone.addEventListener('click', function(e) {
-                e.stopPropagation();
-                callPopup.classList.add('active');
-            });
-
-            // Close popup when clicking the close button
-            closePopupBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                callPopup.classList.remove('active');
-            });
-
-            // Close popup when clicking outside
-            window.addEventListener('click', function(e) {
-                if (e.target === callPopup) {
-                    callPopup.classList.remove('active');
-                }
-            });
-
-            // Prevent closing when clicking inside the popup content
-            callPopup.querySelector('.call-popup-content').addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-            
-            // Handle form submission
-            callForm.addEventListener('submit', function(e) {
-                // Don't prevent default to allow form submission
-                // Show thanks popup after a short delay
-                setTimeout(function() {
-                    thanksPopup.classList.add('active');
-                }, 500);
-            });
-            
-            // Close thanks popup when clicking the close button
-            if (closeThanksBtn) {
-                closeThanksBtn.addEventListener('click', function() {
-                    thanksPopup.classList.remove('active');
-                    callPopup.classList.remove('active');
-                });
-            }
-        }
-
         function adjustMainPadding() {
             var header = document.querySelector('header');
             var main = document.querySelector('main');
@@ -396,6 +390,23 @@
             adjustMainPadding();
             setTimeout(adjustMainPadding, 100);
         });
+
+        // Clients Carousel Auto Slide
+        (function() {
+            const slides = document.querySelectorAll('.clients-slide');
+            let current = 0;
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === idx);
+                });
+            }
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+            setInterval(nextSlide, 3000);
+            showSlide(current);
+        })();
     </script>
 </body>
 
