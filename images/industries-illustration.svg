@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="350" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="350" fill="#fff"/>
+  <!-- Yellow glow in bulb -->
+  <ellipse cx="200" cy="110" rx="55" ry="55" fill="#f7e97b"/>
+  <!-- Bulb outline -->
+  <ellipse cx="200" cy="110" rx="70" ry="70" stroke="#6B46C1" stroke-width="3" fill="none"/>
+  <!-- Bulb filament -->
+  <path d="M200 140 Q200 120 200 110 Q200 100 200 80" stroke="#6B46C1" stroke-width="3" fill="none"/>
+  <circle cx="200" cy="110" r="6" fill="#fff" stroke="#6B46C1" stroke-width="2"/>
+  <!-- Bulb base -->
+  <rect x="185" y="150" width="30" height="18" rx="6" fill="#fff" stroke="#6B46C1" stroke-width="3"/>
+  <rect x="188" y="168" width="24" height="8" rx="3" fill="#fff" stroke="#6B46C1" stroke-width="2"/>
+  <!-- Hand (minimal line art) -->
+  <path d="M170 180 Q120 210 140 240 Q160 270 200 250 Q240 270 260 240 Q280 210 230 180" stroke="#6B46C1" stroke-width="3" fill="none"/>
+  <path d="M140 240 Q130 260 150 265 Q170 270 200 260 Q230 270 250 265 Q270 260 260 240" stroke="#6B46C1" stroke-width="3" fill="none"/>
+  <!-- Palm lines -->
+  <path d="M200 250 Q200 260 200 270" stroke="#6B46C1" stroke-width="2" fill="none"/>
+</svg> 

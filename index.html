@@ -1,20 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { display: flex; align-items: center; justify-content: center; height: 100vh; background: #f7f7f7; margin: 0; }
-    .msg { text-align: center; font-family: 'Inter', Arial, sans-serif; }
-    h1 { color: #6B46C1; font-size: 2.5rem; margin-bottom: 1rem; }
-    p { color: #444; font-size: 1.2rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingPro DigiComm - Communication Solutions</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <div class="msg">
-    <h1>Coming Soon</h1>
-    <p>Our website is temporarily unavailable.<br>Please check back later.</p>
-  </div>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="loader-company-name">
+                    <span class="primary">Pingpro</span>
+                    <span class="secondary">Digicomm</span>
+                </div>
+                <div class="loader-progress">
+                    <div class="progress-bar"></div>
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="/">
+                    <img src="images/pingpro-logo.png" alt="Pingpro Digicomm Logo" class="company-text-img" />
+                </a>
+            </div>
+            <nav class="navbar-links">
+                <a href="/">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#whyus">Why Us</a>
+                <a href="#process">Process</a>
+                <a href="#industries">Industries</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#hero">Contact Us</a>
+            </nav>
+            <div class="navbar-icons">
+                <a href="https://www.instagram.com/pingprodigicomm/" class="icon-circle" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61576800279850" class="icon-circle" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/106420780/admin/dashboard/" class="icon-circle" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Pingprodigicomm" class="icon-circle" title="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-label">Digital Marketing Agency</div>
+                    <h1><span class="hero-headline-white">We craft a dynamic and impactful</span><br><span class="hero-headline-yellow">digital footprint.</span></h1>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-form-card">
+                        <h2 class="hero-form-title">Get In Touch Now!</h2>
+                        <form class="hero-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST">
+                            <input type="text" name="First Name" placeholder="First Name" required>
+                            <input type="text" name="Last Name" placeholder="Last Name" required>
+                            <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+                            <input type="email" name="Work Email ID" placeholder="Work Email ID" required>
+                            <input type="text" name="Organization" placeholder="Organization" required>
+                            <input type="hidden" name="_next" value="http://localhost:8000/thankyou.html">
+                            <button type="submit" class="btn btn-primary">Let's Connect</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2><span class="highlight-yellow">WE'VE GOT WHAT YOU NEED!</span></h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Social Media Marketing</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Performance Marketing</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Search Engine Optimization</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>Content Marketing</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Brand Development</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Videos</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Influencer Marketing</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section" id="process">
+            <div class="container">
+                <div class="process-title">
+                    <span class="process-title-highlight">THE SECRET IS IN THE PROCESS</span>
+                </div>
+                <div class="process-flow">
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-user-circle"></i></div>
+                        <div class="process-label">Discovery Call</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-search"></i></div>
+                        <div class="process-label">Industry Research</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="process-label">Strategy Development</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="process-label">Roadmap Discussion</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="process-label">Onboarding</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-dot"></div>
+                        <div class="process-icon"><i class="fas fa-laptop"></i></div>
+                        <div class="process-label">Execution</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Process Section -->
+
+        <!-- Industries Section -->
+        <section class="industries-section" id="industries">
+            <div class="container industries-container">
+                <div class="industries-left">
+                    <div class="industries-title">
+                        <span class="industries-highlight">INDUSTRIES</span> WE'VE WORKED IN SO FAR!
+                    </div>
+                    <div class="industries-grid">
+                        <div class="industry-card"><i class="fas fa-running"></i><span>Sports</span></div>
+                        <div class="industry-card"><i class="fas fa-coffee"></i><span>Food & Beverage</span></div>
+                        <div class="industry-card"><i class="fas fa-users"></i><span>Parenting</span></div>
+                        <div class="industry-card"><i class="fas fa-city"></i><span>Real Estate</span></div>
+                        <div class="industry-card"><i class="fas fa-couch"></i><span>Interior Design</span></div>
+                        <div class="industry-card"><i class="fas fa-spa"></i><span>Beauty & Wellness</span></div>
+                        <div class="industry-card"><i class="fas fa-project-diagram"></i><span>Coworking</span></div>
+                        <div class="industry-card"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+                        <div class="industry-card"><i class="fas fa-hospital-alt"></i><span>Hospitality</span></div>
+                    </div>
+                    <div class="industries-more">&amp; Many More!</div>
+                </div>
+                <div class="industries-right">
+                    <img src="images/industries-illustration.svg" alt="Industries Illustration" class="industries-illustration industries-illustration-large" />
+                </div>
+            </div>
+        </section>
+        <!-- End Industries Section -->
+
+        <!-- Stats Section -->
+        <section class="stats" id="whyus">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>2+</h3>
+                        <p>YEARS OF EXPERIENCE</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>INDUSTRIES SERVED</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>HAPPY CLIENTS</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>CUPS OF COFFEE</p>
+                    </div>
+                </div>
+                <div class="stats-expert-btn-wrapper">
+                    <a href="#hero" class="btn-expert">Connect with an Expert</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="why-us" id="about">
+            <div class="container whyus-container">
+                <div class="whyus-image">
+                    <img src="images/whyus-illustration.svg" alt="Why Us Illustration" class="whyus-illustration" />
+                </div>
+                <div class="whyus-content">
+                    <h2>WHY <span class="highlight-yellow">PINGPRO DIGICOMM?</span></h2>
+                    <p class="subtitle">Because Personalization is at the core of our business.</p>
+                    <div class="why-us-content">
+                        <p>Every business requires uniquely carved digital marketing strategies based on the opportunities, competitors & ecosystem it operates in. Our process of curating a digital marketing roadmap starts by listening to your business idea, goals, concerns, etc. followed by extensive research & brainstorming. We keep you in the centre and create digital marketing roadmap which aligns with your short & long term business strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <h2>WHAT OUR CLIENTS SAY</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"PingPro is amazing at what they do. They are everything a client looks for in an agency. They enable everything on time and in full. They go above and beyond the responsibilities and bring smiles to our face!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>JOHN DOE</h4>
+                            <p>Chief Manager, Marketing</p>
+                        </div>
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Clients Section -->
+        <section class="clients-section">
+            <div class="container">
+                <div class="clients-title">
+                    <span class="clients-title-bg">OUR</span> <span class="clients-title-highlight">CLIENTS</span>
+                </div>
+                <div class="clients-carousel-wrapper" style="position: relative;">
+                    <div class="clients-carousel scrollable-row" id="clients-carousel">
+                        <div class="clients-slide active">
+                            <img src="images/clients/bahubali-shikanji.png" alt="Bahubali Shikanji">
+                            <img src="images/clients/bic-foods.png" alt="BIC Foods">
+                            <img src="images/clients/frutera.png" alt="Frutera">
+                            <img src="images/clients/indie-Maslak.png" alt="Indie Maslak">
+                            <img src="images/clients/laddy-boba.png" alt="Laddy Boba">
+                            <img src="images/clients/Panchhi-petha.png" alt="Panchhi Petha">
+                            <img src="images/clients/say-s.png" alt="Say S">
+                            <img src="images/clients/vglobal.png" alt="V Global">
+                            <!-- Duplicate for seamless scroll -->
+                            <img src="images/clients/bahubali-shikanji.png" alt="Bahubali Shikanji">
+                            <img src="images/clients/bic-foods.png" alt="BIC Foods">
+                            <img src="images/clients/frutera.png" alt="Frutera">
+                            <img src="images/clients/indie-Maslak.png" alt="Indie Maslak">
+                            <img src="images/clients/laddy-boba.png" alt="Laddy Boba">
+                            <img src="images/clients/Panchhi-petha.png" alt="Panchhi Petha">
+                            <img src="images/clients/say-s.png" alt="Say S">
+                            <img src="images/clients/vglobal.png" alt="V Global">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our Clients Section -->
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2><span class="highlight-yellow">WE'RE YOUR PARTNER IN GROWTH!</span></h2>
+                <div class="cta-features">
+                    <div class="cta-feature-row">
+                        <div class="cta-feature-btn">360-degree Digital Solutions</div>
+                        <div class="cta-feature-btn">Mind Grappling Campaigns</div>
+                        <div class="cta-feature-btn">Impactful Visuals & Content</div>
+                        <div class="cta-feature-btn">Personalized Growth Strategies</div>
+                    </div>
+                    <div class="cta-feature-center">
+                        <div class="cta-feature-btn">Fixed Turnaround Time</div>
+                    </div>
+                </div>
+                <div class="cta-offer">
+                    <h3>Get Free* 30 Minutes Consultation & Personalised Plan</h3>
+                    <p class="offer-value">Worth ₹10,000/-</p>
+                    <a href="#hero" class="btn btn-primary">Connect Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="simple-footer">
+        <div class="footer-description">
+            We are a content-cum-strategy driven digital marketing agency, aiming to provide clients with tailor-made & growth accelerating content.<br>
+            We strive to make you stand out as well as overcome online marketing challenges!
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-address">
+            Address: Sector 62, Noida, Uttar Pradesh 201301, India
+        </div>
+    </footer>
+
+    <button class="back-to-top" title="Back to Top">↑</button>
+
+    <a href="https://wa.me/919958635410" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Carousel functionality
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        const slideInterval = 5000;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Set up automatic sliding
+        setInterval(nextSlide, slideInterval);
+
+        // Set up indicator clicks
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => showSlide(index));
+        });
+
+        // Show first slide
+        showSlide(0);
+
+        function adjustMainPadding() {
+            var header = document.querySelector('header');
+            var main = document.querySelector('main');
+            if (header && main) {
+                var headerHeight = header.offsetHeight;
+                main.style.paddingTop = headerHeight + 'px';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', adjustMainPadding);
+        window.addEventListener('resize', adjustMainPadding);
+        window.addEventListener('orientationchange', adjustMainPadding);
+        window.addEventListener('load', function() {
+            adjustMainPadding();
+            setTimeout(adjustMainPadding, 100);
+        });
+
+        // Clients Carousel Auto Slide
+        (function() {
+            const slides = document.querySelectorAll('.clients-slide');
+            let current = 0;
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === idx);
+                });
+            }
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+            setInterval(nextSlide, 3000);
+            showSlide(current);
+        })();
+
+        // Carousel Dots JS
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.clients-slide');
+            const dotsContainer = document.getElementById('carousel-dots');
+            let current = 0;
+
+            // Create dots
+            slides.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (idx === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+                dot.addEventListener('click', function() {
+                    showSlide(idx);
+                });
+                dotsContainer.appendChild(dot);
+            });
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === idx);
+                    dots[i].classList.toggle('active', i === idx);
+                });
+                current = idx;
+            }
+
+            // Auto-slide every 2 seconds
+            let autoSlideInterval = setInterval(() => {
+                showSlide((current + 1) % slides.length);
+            }, 2000);
+
+            // Pause auto-slide on mouse enter, resume on mouse leave
+            dotsContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            dotsContainer.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(() => {
+                    showSlide((current + 1) % slides.length);
+                }, 2000);
+            });
+
+            // Optional: allow left/right arrow keys for navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    showSlide((current - 1 + slides.length) % slides.length);
+                } else if (e.key === 'ArrowRight') {
+                    showSlide((current + 1) % slides.length);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
