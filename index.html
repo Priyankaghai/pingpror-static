@@ -46,10 +46,10 @@
                 <a href="#hero">Contact Us</a>
             </nav>
             <div class="navbar-icons">
-                <a href="#" class="icon-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="icon-circle" title="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="icon-circle" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="icon-circle" title="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/pingprodigicomm/" class="icon-circle" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61576800279850" class="icon-circle" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/106420780/admin/dashboard/" class="icon-circle" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Pingprodigicomm" class="icon-circle" title="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </header>
@@ -65,12 +65,13 @@
                 <div class="hero-right">
                     <div class="hero-form-card">
                         <h2 class="hero-form-title">Get In Touch Now!</h2>
-                        <form class="hero-form" onsubmit="event.preventDefault(); window.location.href='thankyou.html';">
-                            <input type="text" placeholder="First Name" required>
-                            <input type="text" placeholder="Last Name" required>
-                            <input type="tel" placeholder="Phone Number" required>
-                            <input type="email" placeholder="Work Email ID" required>
-                            <input type="text" placeholder="Organization" required>
+                        <form class="hero-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST">
+                            <input type="text" name="First Name" placeholder="First Name" required>
+                            <input type="text" name="Last Name" placeholder="Last Name" required>
+                            <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+                            <input type="email" name="Work Email ID" placeholder="Work Email ID" required>
+                            <input type="text" name="Organization" placeholder="Organization" required>
+                            <input type="hidden" name="_next" value="http://localhost:8000/thankyou.html">
                             <button type="submit" class="btn btn-primary">Let's Connect</button>
                         </form>
                     </div>
@@ -252,34 +253,27 @@
                 <div class="clients-title">
                     <span class="clients-title-bg">OUR</span> <span class="clients-title-highlight">CLIENTS</span>
                 </div>
-                <div class="clients-carousel" id="clients-carousel">
-                    <div class="clients-slide active">
-                        <img src="images/clients/apac.png" alt="APAC">
-                        <img src="images/clients/maxlife.png" alt="Max Life">
-                        <img src="images/clients/ciena.png" alt="Ciena">
-                        <img src="images/clients/rajdarbar.png" alt="Rajdarbar Realty">
-                    </div>
-                    <div class="clients-slide">
-                        <img src="images/clients/chokhidhani.png" alt="Chokhi Dhani">
-                        <img src="images/clients/domino.png" alt="Domino">
-                        <img src="images/clients/oap.png" alt="OAP">
-                        <img src="images/clients/vishwam.png" alt="Vishwam Ayurveda">
-                    </div>
-                    <div class="clients-slide">
-                        <img src="images/clients/idealspaze.png" alt="Idealspaze">
-                        <img src="images/clients/atulyam.png" alt="Atulyam">
-                        <img src="images/clients/cocacola.png" alt="CocaCola">
-                        <img src="images/clients/rajshila.png" alt="Rajshila">
-                    </div>
-                    <div class="clients-slide">
-                        <img src="images/clients/counterpoint.png" alt="Counterpoint">
-                        <img src="images/clients/sabrangi.png" alt="Sabrangi">
-                        <img src="images/clients/bamboo.png" alt="The Bamboo Co">
-                        <img src="images/clients/apac.png" alt="APAC">
-                    </div>
-                    <div class="clients-slide">
-                        <img src="images/clients/vglobal.png" alt="V Global">
-                        <img src="images/clients/bahubali-shikanji.png" alt="Bahubali Shikanji">
+                <div class="clients-carousel-wrapper" style="position: relative;">
+                    <div class="clients-carousel scrollable-row" id="clients-carousel">
+                        <div class="clients-slide active">
+                            <img src="images/clients/bahubali-shikanji.png" alt="Bahubali Shikanji">
+                            <img src="images/clients/bic-foods.png" alt="BIC Foods">
+                            <img src="images/clients/frutera.png" alt="Frutera">
+                            <img src="images/clients/indie-Maslak.png" alt="Indie Maslak">
+                            <img src="images/clients/laddy-boba.png" alt="Laddy Boba">
+                            <img src="images/clients/Panchhi-petha.png" alt="Panchhi Petha">
+                            <img src="images/clients/say-s.png" alt="Say S">
+                            <img src="images/clients/vglobal.png" alt="V Global">
+                            <!-- Duplicate for seamless scroll -->
+                            <img src="images/clients/bahubali-shikanji.png" alt="Bahubali Shikanji">
+                            <img src="images/clients/bic-foods.png" alt="BIC Foods">
+                            <img src="images/clients/frutera.png" alt="Frutera">
+                            <img src="images/clients/indie-Maslak.png" alt="Indie Maslak">
+                            <img src="images/clients/laddy-boba.png" alt="Laddy Boba">
+                            <img src="images/clients/Panchhi-petha.png" alt="Panchhi Petha">
+                            <img src="images/clients/say-s.png" alt="Say S">
+                            <img src="images/clients/vglobal.png" alt="V Global">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -407,6 +401,56 @@
             setInterval(nextSlide, 3000);
             showSlide(current);
         })();
+
+        // Carousel Dots JS
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.clients-slide');
+            const dotsContainer = document.getElementById('carousel-dots');
+            let current = 0;
+
+            // Create dots
+            slides.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (idx === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+                dot.addEventListener('click', function() {
+                    showSlide(idx);
+                });
+                dotsContainer.appendChild(dot);
+            });
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === idx);
+                    dots[i].classList.toggle('active', i === idx);
+                });
+                current = idx;
+            }
+
+            // Auto-slide every 2 seconds
+            let autoSlideInterval = setInterval(() => {
+                showSlide((current + 1) % slides.length);
+            }, 2000);
+
+            // Pause auto-slide on mouse enter, resume on mouse leave
+            dotsContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            dotsContainer.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(() => {
+                    showSlide((current + 1) % slides.length);
+                }, 2000);
+            });
+
+            // Optional: allow left/right arrow keys for navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    showSlide((current - 1 + slides.length) % slides.length);
+                } else if (e.key === 'ArrowRight') {
+                    showSlide((current + 1) % slides.length);
+                }
+            });
+        });
     </script>
 </body>
 
