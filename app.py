@@ -89,6 +89,22 @@ def serve_contact():
 def serve_thanks():
     return send_from_directory('.', 'thanks.html')
 
+@app.route('/terms')
+def serve_terms():
+    return send_from_directory('.', 'terms.html')
+
+@app.route('/terms.html')
+def serve_terms_html():
+    return send_from_directory('.', 'terms.html')
+
+@app.route('/privacy')
+def serve_privacy():
+    return send_from_directory('.', 'privacy.html')
+
+@app.route('/privacy.html')
+def serve_privacy_html():
+    return send_from_directory('.', 'privacy.html')
+
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     try:

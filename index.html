@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Loader -->
@@ -63,14 +64,38 @@
                 <div class="hero-right">
                     <div class="hero-form-card">
                         <h2 class="hero-form-title">Get In Touch Now!</h2>
-                        <form class="hero-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST">
-                            <input type="text" name="First Name" placeholder="First Name" required>
-                            <input type="text" name="Last Name" placeholder="Last Name" required>
+                        <form class="hero-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST" id="contactForm">
+                            <input type="text" name="Name" placeholder="Name" required>
                             <input type="tel" name="Phone Number" placeholder="Phone Number" required>
-                            <input type="email" name="Work Email ID" placeholder="Work Email ID" required>
-                            <input type="text" name="Organization" placeholder="Organization" required>
+                            <textarea name="Message" placeholder="Message"></textarea>
+                            
+                            <!-- Terms and Conditions Checkbox -->
+                            <div class="form-checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms_conditions" id="terms_conditions" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">By continuing to submit, you agree to our <a href="/terms.html" target="_blank">Terms of Use</a> and confirm that you have read our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</span>
+                                </label>
+                                <div id="terms_conditions_error" class="error-message"></div>
+                            </div>
+                            
+                            <!-- SMS Notifications Checkbox -->
+                            <div class="form-checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="sms_notifications" id="sms_notifications">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">I hereby authorize the sending of SMS notifications, including promotional and informational messages.</span>
+                                </label>
+                            </div>
+                            
+                            <!-- reCAPTCHA -->
+                            <div class="recaptcha-container">
+                                <div class="g-recaptcha" data-sitekey="6LdrZbUrAAAAAH_gi78yGV7DfX1HEnvWJPrhDpNW"></div>
+                                <div id="recaptcha_error" class="error-message"></div>
+                            </div>
+                            
                             <input type="hidden" name="_next" value="https://pingpro.in/thankyou.html">
-                            <button type="submit" class="btn btn-primary">Let's Connect</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">Let's Connect</button>
                         </form>
                     </div>
                 </div>
@@ -302,14 +327,9 @@
         </section>
     </main>
 
-    <footer class="simple-footer">
-        <div class="footer-description">
-            We are a content-cum-strategy driven digital marketing agency, aiming to provide clients with tailor-made & growth accelerating content.<br>
-            We strive to make you stand out as well as overcome online marketing challenges!
-        </div>
-        <div class="footer-divider"></div>
-        <div class="footer-address">
-            Address: Sector 62, Noida, Uttar Pradesh 201301, India
+    <footer class="enhanced-footer">
+        <div class="container">
+            <p>Copyright © 2025 PingPro DigiComm. All Rights Reserved. <a href="/terms.html">Terms and Conditions</a> | <a href="/privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 
