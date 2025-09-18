@@ -64,15 +64,17 @@
                 <div class="hero-right">
                     <div class="hero-form-card">
                         <h2 class="hero-form-title">Get In Touch Now!</h2>
-                        <form class="hero-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST" id="contactForm">
-                            <input type="text" name="Name" placeholder="Name" required>
-                            <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+                        <form class="hero-form" action="https://formsubmit.co/pingprodigicomm@gmail.com" method="POST" id="contactForm" novalidate>
+                            <input type="text" name="Name" id="name" placeholder="Name" required>
+                            <div id="name_error" class="error-message"></div>
+                            <input type="tel" name="Phone Number" id="phone" placeholder="Phone Number" required>
+                            <div id="phone_error" class="error-message"></div>
                             <textarea name="Message" placeholder="Message"></textarea>
                             
                             <!-- Terms and Conditions Checkbox -->
                             <div class="form-checkbox-group">
                                 <label class="checkbox-label">
-                                    <input type="checkbox" name="terms_conditions" id="terms_conditions" required>
+                                    <input type="checkbox" name="terms_conditions" id="terms_conditions">
                                     <span class="checkmark"></span>
                                     <span class="checkbox-text">By continuing to submit, you agree to our <a href="/terms.html" target="_blank">Terms of Use</a> and confirm that you have read our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</span>
                                 </label>
@@ -84,8 +86,9 @@
                                 <label class="checkbox-label">
                                     <input type="checkbox" name="sms_notifications" id="sms_notifications">
                                     <span class="checkmark"></span>
-                                    <span class="checkbox-text">I hereby authorize the sending of SMS notifications, including promotional and informational messages.</span>
+                                    <span class="checkbox-text">I hereby authorize the sending of SMS notifications, IVR, RCS, and email notifications, including promotional and informational messages.</span>
                                 </label>
+                                <div id="sms_notifications_error" class="error-message"></div>
                             </div>
                             
                             <!-- reCAPTCHA -->
@@ -339,6 +342,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="script.js"></script>
     <script>
         // Back to Top Button
         const backToTop = document.querySelector('.back-to-top');
